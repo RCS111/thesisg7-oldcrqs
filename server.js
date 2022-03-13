@@ -1,4 +1,5 @@
 const express = require('express')
+const cookieParser = require('cookie-parser');
 require('dotenv').config()
 
 const DBManager = require('./src/manager/databaseMgr')
@@ -28,11 +29,13 @@ app.use(
     extended: true
   })
 )
+app.use(cookieParser([process.env.COOKIE_SECRET_USER, process.env.COOKIE_SECRET_ADMIN]));
 
 //routes
-app.use(require('./routes/userRoutes')(pendingUser, approveUser))
 app.use('/admin', require('./routes/adminRoutes')(adminSchema))
 app.use('/admin', require('./routes/adminEncRoutes')(adminSchema, pendingUser, approveUser))
+app.use(require('./routes/userRoutes')(pendingUser, approveUser))
+app.use(require('./routes/userEncRoutes')(adminSchema, pendingUser, approveUser))
 
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server is running at port : ${port}`)
