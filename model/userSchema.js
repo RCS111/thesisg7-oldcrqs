@@ -185,6 +185,22 @@ class UserSchema {
       approvalDate: Utility.replaceToNull(req_body.approvalDate)
     })
   }
+
+  async findOneUser(queryParams){
+    return await this.getSchema().findOne(queryParams);
+  }
+
+  async findOneById(idParams){
+    return await this.getSchema().findById(idParams);
+  }
+
+  async insertMany(docsParams){
+    return await this.getSchema().insertMany(docsParams);
+  }
+
+  async deleteOne(queryParams){
+    return await this.getSchema().deleteOne(queryParams);
+  }
 }
 
 module.exports = UserSchema

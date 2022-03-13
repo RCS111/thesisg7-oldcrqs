@@ -81,6 +81,10 @@ class AdminSchema {
       position: Utility.replaceToNull(req_body.position)
     });
   }
+
+  async findOneUser(queryParams) {
+    return await this.getSchema().findOne(queryParams);
+  }
 }
 
 module.exports = AdminSchema
