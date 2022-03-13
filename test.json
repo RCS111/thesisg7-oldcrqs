@@ -1,0 +1,31 @@
+{
+  "email": "zian.catacutan@gmail.com",
+  "pass": "erikaMay123",
+  "fullName": {
+    "fName": "ZIAN",
+    "midName": "MANALO",
+    "lName": "CATACUTAN",
+    "extName": null
+  },
+  "sex": "M",
+  "address": {
+    "houseNo": null,
+    "blkNo": "65",
+    "lotNo": "21",
+    "purokNo": "10",
+    "street": "SAN MIGUEL ST."
+  },
+  "startYear": "2018",
+  "civilStatus": "SINGLE",
+  "birthDay": {
+    "date": "09/02/2000",
+    "place": "ONA OSPITAL NING ANGELES CITY PAMPANGA"
+  },
+  "contactNo": [
+    {
+      "number": "09517570099"
+    }
+  ],
+  "vaccStatus": "1",
+  "approvalDate": null
+}

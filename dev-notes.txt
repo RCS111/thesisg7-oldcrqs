@@ -1,0 +1,15 @@
+// createa query link with params for AJAX Request
+  // xhr.send(`fName=${document.querySelector("#fName").value}&
+  //   lName=${document.querySelector("#lName").value}&
+  //   uName=${document.querySelector("#uName").value}&
+  //   city=${document.querySelector("#city").value}&
+  //   state=${document.querySelector("#state").value}&
+  //   zip=${document.querySelector("#zip").value}&
+  //   agree=${document.querySelector("#agree").checked}`
+  //   .replace(/\n\s+/g, ''));
+
+  //xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+  // routes architecture
+  domain/ <- login page of user and all routes for user
+  domain/admin <- login page of admin and all routes
