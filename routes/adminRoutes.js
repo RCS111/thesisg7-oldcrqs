@@ -3,10 +3,10 @@ const jwt = require('jsonwebtoken')
 
 // utility class
 const JWTAuther = require('../src/validation/jwtAuth')
-const ErrorCodes = require('../src/manager/error')
+const ErrorCodes = require('../src/helpers/error')
 const Validator = require('../src/validation/validation')
 const Crypter = require('../src/validation/crypter')
-const Utility = require('../src/manager/utility')
+const Utility = require('../src/helpers/utility')
 
 module.exports = adminSchema => {
   const router = Router()
@@ -21,7 +21,6 @@ module.exports = adminSchema => {
         return res.redirect('/admin/dashboard') // <- redirecct to dashboard
       }
     } catch (err) {
-      console.log(err);
       if (err.message === "jwt expired") {
         return res.redirect('/admin/refresh-admin-token')
       }

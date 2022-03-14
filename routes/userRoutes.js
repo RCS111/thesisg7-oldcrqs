@@ -1,10 +1,10 @@
 const { Router } = require('express')
 const JWTAuther = require('../src/validation/jwtAuth')
 const jwt = require('jsonwebtoken')
-const ErrorCodes = require('../src/manager/error')
+const ErrorCodes = require('../src/helpers/error')
 const Crypter = require('../src/validation/crypter')
 const Validator = require('../src/validation/validation')
-const Utility = require('../src/manager/utility')
+const Utility = require('../src/helpers/utility')
 
 module.exports = (pendingUser, approveUser) => {
   const router = new Router()
@@ -31,6 +31,14 @@ module.exports = (pendingUser, approveUser) => {
     }
     return res.status(200).render('uLogin')
   })
+
+  router.get('/signup', async (req, res) => {
+    try {
+      res.status(200).render('uRegister');
+    } catch (err){
+      
+    }
+  });
 
   router.post('/register', async (req, res) => {
     //JOI IS PROBABLY NOT REQUIRED

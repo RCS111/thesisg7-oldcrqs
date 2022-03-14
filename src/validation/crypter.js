@@ -1,5 +1,5 @@
 const bcrypt = require('bcryptjs')
-const ErrorCodes = require('../manager/error')
+const ErrorCodes = require('../helpers/error')
 
 class Crypter {
   static async hashPass (plainTextPass) {

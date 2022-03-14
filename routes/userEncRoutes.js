@@ -2,7 +2,7 @@
 
 const { Router } = require('express')
 const JWTAuther = require('../src/validation/jwtAuth')
-const ErrorCodes = require('../src/manager/error')
+const ErrorCodes = require('../src/helpers/error')
 
 module.exports = (adminSchema, pendingUser, approveUser) => {
   const router = Router()

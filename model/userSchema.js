@@ -1,6 +1,6 @@
 const req = require('express/lib/request')
 const mongoose = require('mongoose')
-const Utility = require('../src/manager/utility');
+const Utility = require('../src/helpers/utility');
 
 class UserSchema {
   constructor (db) {

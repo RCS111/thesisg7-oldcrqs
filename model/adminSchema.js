@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const Utility = require('../src/manager/utility')
+const Utility = require('../src/helpers/utility')
 
 class AdminSchema {
   constructor () {
